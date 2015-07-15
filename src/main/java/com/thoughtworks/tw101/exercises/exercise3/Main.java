@@ -10,6 +10,10 @@ public class Main {
 
         Integer sum = oddSum.of(1, 100);
 
-        System.out.println(sum);
+        if (sum < 0) {
+            System.out.println("You must enter a start number that is less than the end number");
+        } else {
+            System.out.println(sum);
+        }
     }
 }
