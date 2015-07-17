@@ -12,6 +12,6 @@ public class Troll implements Monster {
     }
 
     public void reportStatus() {
-        System.out.println();
+        System.out.println(name + "'s status is: " + hitpoints + " points.");
     }
 }

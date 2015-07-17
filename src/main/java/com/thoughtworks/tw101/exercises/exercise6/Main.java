@@ -20,5 +20,20 @@ public class Main {
         Troll troll2 = new Troll();
         Troll troll3 = new Troll();
 
+        ArrayList<Monster> monsterList = new ArrayList<>();
+        monsterList.add(orc1);
+        monsterList.add(orc2);
+        monsterList.add(orc3);
+        monsterList.add(troll1);
+        monsterList.add(troll2);
+        monsterList.add(troll3);
+
+        for (Monster m : monsterList) {
+            m.takeDamage(10);
+        }
+
+        for (Monster m : monsterList) {
+            m.reportStatus();
+        }
     }
 }
