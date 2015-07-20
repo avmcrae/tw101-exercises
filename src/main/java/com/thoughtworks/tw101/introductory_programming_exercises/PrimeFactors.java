@@ -1,4 +1,5 @@
 package com.thoughtworks.tw101.introductory_programming_exercises;
+import java.util.ArrayList;
 
 //  Prime Factors Exercise
 //  Write a method generate(int n) that given an integer N will return a list of integers such that the numbers
@@ -14,11 +15,14 @@ public class PrimeFactors {
     }
 
     private static List<Integer> generate(int n) {
-        /*List<Integer> factors = ;
-        int x = 1;
-        while (x < n) {
-        }*/
-
-        return null;
+        List<Integer> factors = new ArrayList<>();
+        for (int x = 2; x < n; x++) {
+            if (n % x == 0) {
+                if (generate(x).isEmpty()) {
+                    factors.add(x);
+                }
+            }
+        }
+        return factors;
     }
 }
