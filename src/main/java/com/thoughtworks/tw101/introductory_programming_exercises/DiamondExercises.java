@@ -35,7 +35,6 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
-        //int max = n + 2;
         drawAnIsoscelesTriangle(n);
 
         n += 2;
@@ -44,7 +43,7 @@ public class DiamondExercises {
             for (float y = 1; y <= (x+1)/2; y++) {
                 System.out.print(" ");
             }
-            for (int z = n-2; z >= x; z--) {
+            for (int z = n-3; z >= x; z--) {
                 System.out.print("*");
             }
             x = x + 2;
@@ -61,6 +60,32 @@ public class DiamondExercises {
 //            ***
 //             *
     private static void drawADiamondWithYourName(int n) {
+        int a = n+2;
+        int x = 1;
+        while (x <= n) {
+            for (float y = 1; y <= (a+2-x)/2; y++) {
+                System.out.print(" ");
+            }
+            for (int z = 1; z <= x; z++) {
+                System.out.print("*");
+            }
+            x = x + 2;
+            System.out.println();
+        }
 
+        System.out.println("Avalon");
+
+        n += 2;
+        x = 1;
+        while (x <= n) {
+            for (float y = 1; y <= (x+3)/2; y++) {
+                System.out.print(" ");
+            }
+            for (int z = n-2; z >= x; z--) {
+                System.out.print("*");
+            }
+            x = x + 2;
+            System.out.println();
+        }
     }
 }
