@@ -13,7 +13,18 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
-
+        n += 2;
+        int x = 1;
+        while (x <= n) {
+            for (float y = 1; y <= (n-x)/2; y++) {
+                System.out.print(" ");
+            }
+            for (int z = 1; z <= x; z++) {
+                System.out.print("*");
+            }
+            x = x + 2;
+            System.out.println();
+        }
     }
 
 //    Diamond
@@ -24,7 +35,21 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
+        //int max = n + 2;
+        drawAnIsoscelesTriangle(n);
 
+        n += 2;
+        int x = 1;
+        while (x <= n) {
+            for (float y = 1; y <= (x+1)/2; y++) {
+                System.out.print(" ");
+            }
+            for (int z = n-2; z >= x; z--) {
+                System.out.print("*");
+            }
+            x = x + 2;
+            System.out.println();
+        }
     }
 
 //    Diamond with Name

@@ -14,6 +14,11 @@ public class PrimeFactors {
     }
 
     private static List<Integer> generate(int n) {
+        /*List<Integer> factors = ;
+        int x = 1;
+        while (x < n) {
+        }*/
+
         return null;
     }
 }
