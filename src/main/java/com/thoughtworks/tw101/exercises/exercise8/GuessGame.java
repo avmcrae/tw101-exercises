@@ -24,7 +24,7 @@ public class GuessGame {
         if (guess == correctNumber) {
             System.out.println("Your guess, " + guess + " was correct!");
             System.out.println("Your previous guesses were:");
-            for (int g : p.pastGuesses) {
+            for (int g : Player.pastGuesses) {
                 System.out.println(g);
             }
             return true;

@@ -5,7 +5,6 @@ public class Accumulator {
 
 	void increment() {
 		incrementCount += 1;
-		System.out.println("Increment has been called!");
 	}
 
 	void total() {

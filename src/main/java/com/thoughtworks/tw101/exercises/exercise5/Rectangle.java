@@ -11,7 +11,7 @@ public class Rectangle {
 
     public int area(){
         if (length < 0 || width < 0) {
-            return -1; //error
+            return -1;
         } else {
             return length * width;
         }
