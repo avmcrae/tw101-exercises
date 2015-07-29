@@ -37,14 +37,13 @@ public class Node {
     }
 
     public List<String> names() {
-        if (this.leftChild == null && this.rightChild == null) {
+        if (this.leftChild == null) {
             currentNames.add(this.name);
-        }
-        else if (this.leftChild == null) {
-            currentNames.add(this.name);
-            currentNames.addAll(this.rightChild.names());
-        }
-        else if (this.rightChild == null) {
+
+            if (this.rightChild != null) {
+                currentNames.addAll(this.rightChild.names());
+            }
+        } else if (this.rightChild == null){
             currentNames.addAll(this.leftChild.names());
             currentNames.add(this.name);
         } else {
@@ -52,6 +51,8 @@ public class Node {
             currentNames.add(this.name);
             currentNames.addAll(this.rightChild.names());
         }
+
+
         return currentNames;
     }
 }
