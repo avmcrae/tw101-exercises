@@ -16,14 +16,12 @@ public class PrimeFactors {
 
     private static List<Integer> generate(int n) {
         List<Integer> factors = new ArrayList<>();
-        int x = 2;
-        while (x < n) {
+        for (int x = 2; x < n; x++) {
             if (n % x == 0) {
                 if (generate(x).isEmpty()) {
                     factors.add(x);
                 }
             }
-            x++;
         }
         return factors;
     }
